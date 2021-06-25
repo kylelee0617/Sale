@@ -65,11 +65,18 @@
         <class>com.fg.dao.entity.fe5d.FE5D05</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+            <property name="javax.persistence.jdbc.url" value="${spring.datasource.primary.jdbcUrl}" />
+            <property name="javax.persistence.jdbc.user" value="${spring.datasource.primary.username}" />
+            <property name="javax.persistence.jdbc.password" value="${spring.datasource.primary.password}" />
+            <property name="hibernate.dialect" value="${spring.datasource.secondary.driver-class-name}" />
+          <!-- 
             <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://172.22.14.6:1433;databaseName=FE5D;selectMethod=cursor" />
             <property name="javax.persistence.jdbc.user" value="fed1" />
             <property name="javax.persistence.jdbc.password" value="fed1fglife" />
             <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServer2012Dialect" />
+           -->
             <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
             <property name="hibernate.hbm2ddl.auto" value="none" />
         </properties>
     </persistence-unit>
