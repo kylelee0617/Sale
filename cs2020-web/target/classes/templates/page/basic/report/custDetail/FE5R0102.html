@@ -1,0 +1,71 @@
+<!-- import layout檔案路徑 -->
+<html xmlns:th="http://www.thymeleaf.org" layout:decorator="layout/layout">
+
+<head>
+<script th:src="@{/js/basic/report/custDetail/FE5R0102.js}"></script>
+<script>
+	$(function() {
+		funcName = "客戶資料清冊(FE5R0102)";
+		updBread(funcName);
+	});
+</script>
+</head>
+
+<body>
+  <div layout:fragment="introSection">
+  	
+    <div class="row">
+      <div class="col-md-12 form-inline mb-3">
+        <div class="col-md-1">
+          <button id="btnSave" class="btn btn-primary btn-md btn-block">列印</button>
+        </div>
+      </div>
+      <div class="col-md-12 form-inline mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="code1" class="mr-1">工程代號 : </label>
+          <select class="form-control form-control-sm" id="exampleFormControlSelect1">
+            <option>H101A</option>
+            <option>H101T</option>
+            <option>H102A</option>
+            <option>H93A</option>
+            <option>H95T</option>
+          </select>
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <input type="text" class="form-control form-control-sm width300"  placeholder="" readonly>
+        </div>
+      </div>
+      
+      <div class="col-md-12 form-inline mb-4">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">客戶代號 : </label> 
+          <input type="text" class="form-control form-control-sm width100" value=""  placeholder="" >
+        </div>
+        <div class="form-group mb-2">
+          <label for="name1" class="mr-1">至</label> 
+          <input type="text" class="form-control form-control-sm width100" value=""  placeholder="" >
+        </div>
+        <span style="color: blue;"> (客戶空白表全部)</span>
+      </div>
+      
+      <div class="col-md-12 form-inline mb-4">
+        <div class="form-group mx-sm-2 mb-2">
+          <select class="form-control" multiple="multiple" name="groups" style="width:20%;" size="10">
+               <option value="1">1:業務客戶代號</option>
+               <option selected value="2">2:客戶簡稱</option>
+               <option value="3">3:客戶所有</option>
+               <option value="4">4.英文名稱</option>
+               <option selected value="5">5:對象別</option>
+               <option value="6">6:門牌</option>
+               <option value="7">7:身分證號</option>
+               <option value="8">8:出生日</option>
+               <option value="9">9:負責人</option>
+               <option value="10">10:主要聯絡人</option>
+           </select>
+        </div>
+      </div>
+    </div><!-- end -->
+    <br>
+  </div>
+</body>
+</html>

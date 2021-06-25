@@ -1,0 +1,65 @@
+<!-- import layout檔案路徑 -->
+<html xmlns:th="http://www.thymeleaf.org" layout:decorator="layout/layout">
+
+<head>
+<script>
+	$(function() {
+		funcName = "房屋付款總表(FE5R0807)";
+		updBread(funcName);
+		funcInit();
+	});
+</script>
+</head>
+
+<body>
+  <div layout:fragment="introSection">
+    
+    <div class="row">
+    	<div class="col-md-12 form-inline mb-3">
+       <div class="col-md-1">
+         <button class="btn btn-primary btn-md btn-block">列印</button>
+       </div>
+     	</div>
+      <div class="col-md-12 form-inline mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="code1" class="mr-1">工程代號 : </label>
+          <select class="form-control form-control-sm" id="exampleFormControlSelect1">
+            <option>H101A</option>
+            <option>H101T</option>
+            <option>H102A</option>
+            <option>H93A</option>
+            <option>H95T</option>
+          </select>
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <input type="text" class="form-control form-control-sm width300"  placeholder="" readonly>
+        </div>
+      </div>
+      
+      <div class="col-md-12 form-inline mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">客戶代號 : </label> 
+          <input type="text" class="form-control form-control-sm width100" value=""  placeholder="" >
+        </div>
+        <div class="form-group mb-2">
+          <label for="name1" class="mr-1">至</label> 
+          <input type="text" class="form-control form-control-sm width100" value=""  placeholder="" >
+        </div>
+      </div>
+      
+      <div class="col-md-12 form-inline mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <input class="form-check-input" type="radio" name="ra1" id="ra11" value="option1"> 
+          <label class="form-check-label mr-2" for="ra11">已繳金額</label>
+          <input class="form-check-input" type="radio" name="ra1" id="ra12" value="option1"> 
+          <label class="form-check-label mr-2" for="ra12">合約金額</label>
+        </div>
+      </div>
+      
+    </div><!-- end -->
+    
+    <br>
+    
+  </div>
+</body>
+</html>

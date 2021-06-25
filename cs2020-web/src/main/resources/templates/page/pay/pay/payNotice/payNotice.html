@@ -1,0 +1,237 @@
+<!-- import layout檔案路徑 -->
+<html xmlns:th="http://www.thymeleaf.org"
+	layout:decorator="layout/layout">
+
+<head>
+<script>
+	$(function() {
+		funcName = "payNotice";
+		updBread(funcName);
+		funcInit();
+	});
+</script>
+</head>
+
+<body>
+	<div layout:fragment="introSection">
+		<div class="row">
+			<div class="col-md-12 form-inline mb-3">
+       <div class="col-md-2">
+         <button class="btn btn-primary btn-md btn-block">繳款通知單</button>
+       </div>
+       <div class="col-md-2">
+         <button class="btn btn-primary btn-md btn-block">委外繳款通知單轉檔</button>
+       </div>
+     </div>
+		</div>
+		<!-- 列印收款單 -->
+		<fieldset class="px-3 pb-4">
+			<legend style="width: 100px;">列印選項</legend>
+			<div class="row">
+				<div class="col-md-12 form-inline mb-2">
+	        <div class="form-group mx-sm-2 mb-2">
+	          <label for="name1" class="mr-1">案號 : </label> 
+	          <input type="text" class="form-control form-control-sm mr-1" value=""  placeholder="" >
+	          <input type="text" class="form-control form-control-sm width300"  placeholder="" readonly>
+	        </div>
+	        <div class="form-group mx-sm-2 mb-2">
+	          <label for="name1" class="mr-1">信託帳戶截止日 : </label> 
+	          <input type="text" class="form-control form-control-sm width300" value=""  placeholder="" readonly>
+	        </div>
+	      </div>
+	      
+	      <div class="col-md-12 form-inline mb-2">
+	        <div class="form-group mx-sm-2 mb-2">
+	          <label for="name1" class="mr-1">房屋 : </label> 
+	          <input type="text" class="form-control form-control-sm" value=""  placeholder="期數起" >
+	        </div>
+	        <div class="form-group mb-2">
+	          <label for="name1" class="mr-1">至</label> 
+	          <input type="text" class="form-control form-control-sm" value=""  placeholder="期數訖" >
+	        </div>
+	        <div class="form-group mx-sm-2 mb-2">
+	          <label for="name1" class="mr-1">工程變更款 : </label> 
+	          <input type="text" class="form-control form-control-sm" value=""  placeholder="" >
+	        </div>
+	      </div>
+	      
+	      <div class="col-md-12 form-inline mb-2">
+	        <div class="form-group mx-sm-2 mb-2">
+	          <label for="name1" class="mr-1">土地 : </label> 
+	          <input type="text" class="form-control form-control-sm" value=""  placeholder="期數起" >
+	        </div>
+	        <div class="form-group mb-2">
+	          <label for="name1" class="mr-1">至</label> 
+	          <input type="text" class="form-control form-control-sm" value=""  placeholder="期數訖" >
+	        </div>
+	      </div>
+	      
+	      <div class="col-md-12 form-inline mb-2">
+	        <div class="form-group mx-sm-2 mb-2">
+	          <label for="name1" class="mr-1">車位 : </label> 
+	          <input type="text" class="form-control form-control-sm" value=""  placeholder="期數起" >
+	        </div>
+	        <div class="form-group mb-2">
+	          <label for="name1" class="mr-1">至</label> 
+	          <input type="text" class="form-control form-control-sm" value=""  placeholder="期數訖" >
+	        </div>
+	      </div>
+	      
+	      <div class="col-md-12 form-inline mb-2">
+	        <div class="form-group mx-sm-2 mb-2">
+	          <label for="name1" class="mr-1">代收 : </label> 
+	          <input type="text" class="form-control form-control-sm" value=""  placeholder="期數起" >
+	        </div>
+	        <div class="form-group mb-2">
+	          <label for="name1" class="mr-1">至</label> 
+	          <input type="text" class="form-control form-control-sm" value=""  placeholder="期數訖" >
+	        </div>
+	      </div>
+	      
+	      <div class="col-md-12 form-inline mb-2">
+	      	<div class="form-group mx-sm-2 mb-2">
+	          <label for="name1" class="mr-1">預計繳款日期 : </label> 
+	          <input type="text" class="form-control form-control-sm" value=""  placeholder="">
+	        </div>
+	        <div class="form-group mx-sm-2 mb-2">
+	          <label for="name1" class="mr-1">通知日期 : </label> 
+	          <input type="text" class="form-control form-control-sm" value=""  placeholder="">
+	        </div>
+	        <div class="form-group mx-sm-2 mb-2">
+	          <label for="name1" class="mr-1">信託戶 : </label> 
+	          <select class="form-control form-control-sm">
+              <option value="1">全部戶</option>
+              <option value="2">信託戶</option>
+              <option value="3">非信託戶</option>
+            </select>
+	        </div>
+	      </div>
+	      
+			</div>
+
+      <!-- 
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">(委外)優惠付款-土</span>
+            </div>
+            <input type="text" class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" placeholder="期數起">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">至</span>
+            </div>
+            <input type="text" class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" placeholder="期數訖">
+          </div>
+        </div>
+      </div>
+      
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">(委外)完成進度</span>
+            </div>
+            <input type="text" class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" placeholder="期數 - 起">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">至</span>
+            </div>
+            <input type="text" class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" placeholder="期數 - 訖">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="">
+        </div>
+      </div>
+      
+      <div class="row mb-3">
+        <div class="col-md-4 ">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">(委外)下期通知</span>
+            </div>
+            <input type="text" class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" placeholder="期數 - 起">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">至</span>
+            </div>
+            <input type="text" class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" placeholder="期數 - 訖">
+          </div>
+        </div>
+        <div class="col-md-2 form-inline mr-3">
+          <div class="form-group ">
+            <label for="code1" class="mr-1">預計年月 : </label> 
+            <input type="text" class="form-control form-control-sm" value="">
+          </div>
+        </div>
+        <div class="col-md-4 form-inline">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="r1" id="r1" value="option1"> 
+            <label class="form-check-label" for="r1">上旬</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="r1" id="r2" value="option2"> 
+            <label class="form-check-label" for="r2">中旬</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="r1" id="r3" value="option2"> 
+            <label class="form-check-label" for="r3">下旬</label>
+          </div>
+        </div>
+      </div>
+      -->
+
+			<hr class="formHR1">
+			<div class="row">
+				<div class="col-md-12 form-inline mb-2">
+	        <div class="form-group mx-sm-2 mb-2">
+	          <label for="name1" class="mr-1">棟樓別 : </label> 
+	          <input type="text" class="form-control form-control-sm" value=""  placeholder="起" >
+	        </div>
+	        <div class="form-group mb-2">
+	          <label for="name1" class="mr-1">至</label> 
+	          <input type="text" class="form-control form-control-sm" value=""  placeholder="訖" >
+	        </div>
+	      </div>
+      </div>
+
+			<hr class="formHR1">
+			
+			<div class="row">
+				<div class="col-md-12 form-inline mb-2">
+	        <div class="form-group mx-sm-2 mb-2">
+	          <label for="name1" class="mr-1">補印繳款單別 : </label> 
+	          <input type="text" class="form-control form-control-sm" value=""  placeholder="" >
+	        </div>
+	      </div>
+      </div>
+      
+			<hr class="formHR1">
+
+			<div class="row mb-3">
+				<div class="col-md-12">
+					<div class="form-group">
+						<textarea class="form-control" name="" id="" cols="30" rows="6"
+							placeholder="備註 say something...."></textarea>
+					</div>
+				</div>
+			</div>
+
+		</fieldset>
+
+		<br>
+
+	</div>
+</body>
+
+</html>

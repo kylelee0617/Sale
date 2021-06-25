@@ -1,0 +1,98 @@
+<!-- import layout檔案路徑 -->
+<html xmlns:th="http://www.thymeleaf.org" layout:decorator="layout/layout">
+
+<head>
+<script th:src="@{/js/basic/chgName/FE5R0505/FE5R0505.js}"></script>
+<script>
+	$(function() {
+		funcName = "客戶繳款明細(FE5R0505)";
+		updBread(funcName);
+	});
+</script>
+</head>
+
+<body>
+  <div layout:fragment="introSection">
+  
+    <!-- 客戶繳款明細 -->
+    <div class="row"><!-- start -->
+      <div class="col-md-12 form-inline mb-3">
+	      <div class="col-md-1">
+	          <button class="btn btn-primary btn-md btn-block">查詢</button>
+	        </div>
+        <div class="col-md-1">
+          <button id="btnSave" class="btn btn-primary btn-md btn-block">列印</button>
+        </div>
+      </div>
+      <div class="col-md-12 form-inline mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="code1" class="mr-1">工程代號 : </label>
+          <select class="form-control form-control-sm" id="exampleFormControlSelect1">
+            <option>H101A</option>
+            <option>H101T</option>
+            <option>H102A</option>
+            <option>H93A</option>
+            <option>H95T</option>
+          </select>
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <input type="text" class="form-control form-control-sm width300"  placeholder="" readonly>
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">客戶代號 : </label> 
+          <input type="text" class="form-control form-control-sm width100" value="B02F33"  placeholder="" >
+        </div>
+        <div class="form-group mb-2">
+          <label for="name1" class="mr-1">至</label> 
+          <input type="text" class="form-control form-control-sm width100" value="A08F99"  placeholder="" >
+        </div>
+      </div>
+      
+      <div class="col-md-12 form-inline mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">身分證字號 : </label> 
+          <input type="text" class="form-control form-control-sm width100 mr-3" value="F123456789"  placeholder="" >
+        </div>
+      </div>
+      
+      <!-- 多選單 for 購屋證明單編號 -->
+      <div class="col-md-12 mb-3">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="exampleFormControlSelect2" class="mr-1">購屋證明單編號 : </label>
+          <select multiple class="form-control" id="exampleFormControlSelect2" style="width:20%;">
+            <option>CS0331H98A10908001</option>
+            <option>CS0331H98A10904001</option>
+            <option>CS0331H98A10905001</option>
+            <option>CS0331H98A10906001</option>
+            <option>沒有了.....</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="form-group mx-sm-2 mb-2">
+          <table id="table"></table>
+        </div>
+      </div> 
+      <div class="col-md-6">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="value1">已繳總金額 : </label>
+          <input type="text" class="form-control form-control-sm width300"  placeholder="" readonly>
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="value1">已發通知金額 : </label>
+          <input type="text" class="form-control form-control-sm width300"  placeholder="" readonly>
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="value1">合約總金額 : </label>
+          <input type="text" class="form-control form-control-sm width300"  placeholder="" readonly>
+        </div>
+      </div>
+      
+    </div><!-- end -->
+    <br>
+
+  </div>
+</body>
+
+</html>

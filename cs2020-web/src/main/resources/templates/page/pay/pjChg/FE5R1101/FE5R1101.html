@@ -1,0 +1,81 @@
+<!-- import layout檔案路徑 -->
+<html xmlns:th="http://www.thymeleaf.org" layout:decorator="layout/layout">
+
+<head>
+
+<script>
+	$(function() {
+		funcName = "工程變更報表(FE5R1101)";
+		updBread(funcName);
+	});
+</script>
+
+</head>
+
+<body>
+  <div layout:fragment="introSection">
+    
+    <!-- FE5R1101 工程變更報表 -->
+    <div class="row">
+      <div class="col-md-12 form-inline mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">條件 : </label> 
+          <input class="form-check-input" type="radio" name="rr1" id="rr1" value="option1"> 
+          <label class="form-check-label mr-2" for="rr1">依客戶</label>
+          <input class="form-check-input" type="radio" name="rr1" id="rr2" value="option1"> 
+          <label class="form-check-label mr-2" for="rr2">依工變號</label>
+          <input type="checkbox" class="form-check-input" id="chkb1">
+          <label class="form-check-label" for="chkb1">含解約戶</label>
+        </div>
+      </div>
+      
+      <div class="col-md-12 form-inline mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="code1" class="mr-1">工程代號 : </label>
+          <select class="form-control form-control-sm" id="exampleFormControlSelect1">
+            <option>H101A</option>
+            <option>H101T</option>
+            <option>H102A</option>
+            <option>H93A</option>
+            <option>H95T</option>
+          </select>
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <input type="text" class="form-control form-control-sm width300"  placeholder="" readonly>
+        </div>
+      </div>
+      
+      <div class="col-md-12 form-inline mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">客戶代號 : </label> 
+          <input type="text" class="form-control form-control-sm width100" value=""  placeholder="" >
+        </div>
+        <div class="form-group mb-2">
+          <label for="name1" class="mr-1">至</label> 
+          <input type="text" class="form-control form-control-sm width100" value=""  placeholder="" >
+        </div>
+      </div>
+      
+      <div class="col-md-12 form-inline mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">工變號 : </label> 
+          <input type="text" class="form-control form-control-sm width100" value=""  placeholder="" >
+        </div>
+        <div class="form-group mb-2">
+          <label for="name1" class="mr-1">至</label> 
+          <input type="text" class="form-control form-control-sm width100" value=""  placeholder="" >
+        </div>
+      </div>
+      
+    </div><!-- end -->
+    
+    <div class="row justify-content-md-start mt-5">
+      <div class="col-md-2">
+        <button id="btnPrt" class="btn btn-primary btn-md btn-block">列印</button>
+      </div>
+    </div>
+    <br>
+    
+  </div>
+</body>
+</html>

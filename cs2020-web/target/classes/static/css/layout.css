@@ -1,0 +1,48 @@
+#introSection {
+  /* min-height: 857px; */
+}
+
+#breadcrumb {
+  margin-top: 75px;
+  z-index: 0;
+}
+
+fieldset {
+  border: 1px solid blueviolet;
+  border-radius: 15px;
+  min-height: 200px;
+}
+
+fieldset legend {
+  font-weight: bolder;
+  color: blueviolet;
+}
+
+.formHR1 {
+  border-top: 1px solid burlywood;
+  /* margin-bottom: 5px; */
+}
+
+.bootstrap-table {
+  height:200px;
+}
+
+.width25 {
+	width:25px !important;
+}
+
+.width50 {
+	width:50px !important;
+}
+
+.width100 {
+	width:100px !important;
+}
+
+.width200 {
+	width:200px !important;
+}
+
+.width300 {
+	width:300px !important;
+}

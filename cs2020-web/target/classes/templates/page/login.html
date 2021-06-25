@@ -1,0 +1,38 @@
+<!-- index.html -->
+<html 
+	xmlns:th="http://www.thymeleaf.org"
+	layout:decorator="layout/layout"><!-- layout檔案路徑 -->
+  <head>...</head>
+  <body>
+    <div layout:fragment="introSection">
+    
+    	<h2>Please Login</h2>
+    	<form action="#" th:action="@{/doLogin}" th:object="${loginBean}" method="post" >
+    	<div class="row mt-4 pl-2">
+		    <div class="col-md-2 col-sm-4">
+		        <div class="input-group">
+		            <div class="input-group-prepend">
+		                <span class="input-group-text" id="inputGroup-sizing-default">User Account</span>
+		            </div>
+		            <input type="text" th:field="*{useracc}" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+		        </div>
+		    </div>
+		    <div class="col-md-10"></div>
+		    <div class="col-md-2  col-sm-4 mt-2">
+		        <div class="input-group mb-3">
+		            <div class="input-group-prepend">
+		                <span class="input-group-text" id="inputGroup-sizing-default">paddword</span>
+		            </div>
+		            <input type="text" th:field="*{userpwd}" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+		        </div>
+		    </div>
+		    <div class="col-md-10"></div>
+		    <div class="col-md-2 col-sm-3">
+		    	<button class="btn btn-primary" type="submit">登入</button>
+		    </div>
+		</div>
+		</form>
+		
+    </div>
+  </body>
+</html>

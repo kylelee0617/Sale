@@ -1,0 +1,103 @@
+<div th:fragment="FE5P11011">
+
+  <!-- 基本資料 -->
+
+  <div class="row"><!-- start -->
+      <div class="col-md-12 form-inline mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="code1" class="mr-1">工程代號 : </label>
+          <select class="form-control form-control-sm" id="exampleFormControlSelect1">
+            <option>H101A</option>
+            <option>H101T</option>
+            <option>H102A</option>
+            <option>H93A</option>
+            <option>H95T</option>
+          </select>
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <input type="text" class="form-control form-control-sm width300"  placeholder="" value="遠熊香香雞" readonly>
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">客戶代號 : </label> 
+          <input type="text" class="form-control form-control-sm width100" value="B02F33"  placeholder="" >
+        </div>
+      </div>
+      
+      <div class="col-md-12 form-inline mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" >第</label> 
+          <input type="text" class="form-control form-control-sm width50" value="300"  placeholder="" >
+          <label for="name1" >次</label>
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">工變號 : </label> 
+          <input type="text" class="form-control form-control-sm width100" value="A123456789"  placeholder="" >
+        </div>
+      </div>
+      
+      <div class="col-md-12 form-inline mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">申請日 : </label> 
+          <input type="text" class="form-control form-control-sm width100 mr-3" value="2020/09/99"  placeholder="" >
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">經辦人 : </label> 
+          <input type="text" class="form-control form-control-sm width100" value="李阿瑋"  placeholder="" >
+        </div>
+      </div>
+      
+      <div class="col-md-12 form-inline mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">備註 : </label> 
+          <input type="text" class="form-control form-control-sm width300 mr-3" value="不想寫"  placeholder="" >
+        </div>
+      </div>
+      
+      <div class="col-md-12 form-inline mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">列入贈送 : </label> 
+          <input class="form-check-input" type="radio" name="rr1" id="rr1" value="option1"> 
+          <label class="form-check-label mr-2" for="rr1">是</label>
+          <input class="form-check-input" type="radio" name="rr1" id="rr2" value="option1"> 
+          <label class="form-check-label mr-2" for="rr2">否</label>
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">本張單據狀態 : </label> 
+          <input type="text" class="form-control form-control-sm width200" value="沒人理"  placeholder="" readonly>
+        </div>
+      </div>
+      
+      <div class="col-md-12 form-inline mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">追加合計 : </label> 
+          <input type="text" class="form-control form-control-sm width100 mr-3" value="0"  placeholder="" readonly>
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">追減合計 : </label> 
+          <input type="text" class="form-control form-control-sm width100 mr-3" value="5301"  placeholder="" readonly>
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">本單據金額 : </label> 
+          <input type="text" class="form-control form-control-sm width100 mr-3" value="9999"  placeholder="" readonly>
+        </div>
+      </div>
+      
+      <div class="col-md-12  mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">收款紀錄 : </label> 
+          <input type="text" class="form-control form-control-sm mr-3" value="不見了" style="width:50%;"  placeholder="" readonly>
+        </div>
+      </div>
+      
+    
+    </div><!-- end -->
+    
+    <!-- 按鈕區 -->
+    <div class="row justify-content-md-start mt-5">
+      <div class="col-md-2">
+        <button id="btnPrt" class="btn btn-primary btn-md btn-block">列印</button>
+      </div>
+    </div>
+    <br>
+
+</div>

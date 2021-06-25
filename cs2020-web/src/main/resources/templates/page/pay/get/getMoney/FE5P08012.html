@@ -1,0 +1,102 @@
+<div th:fragment="FE5P08012">
+
+  <script th:src="@{/js/pay/get/getMoney/FE5P08012.js}"></script>
+  <script th:src="@{/js/tableWork.js}"></script>
+  <!-- js End -->
+
+  <div class="row">
+    <div class="col-md-12 form-inline mb-2">
+      <fieldset class="px-3 pb-3">
+        <legend style="width: 150px;">款項資料</legend>
+        <div id="toolbar">
+          <button id="buttonAdd1" class="btn btn-outline-success">新增</button>
+          &nbsp;
+          <button id="getTableData1" class="btn btn-outline-danger">刪除</button>
+        </div>
+        <br>
+        <table id="table1"></table>
+      </fieldset>
+    </div>
+
+    <div class="col-md-12 form-inline mb-2">
+      <div class="form-group mx-sm-2 mb-2">
+        <input class="form-check-input" type="checkbox" name="rr5" id="rr5" value="option1"> <label class="form-check-label" for="rr5">代繳款</label>
+      </div>
+      <div class="form-group mx-sm-2 mb-2">
+        <input class="form-check-input" type="checkbox" name="rr5" id="rr5" value="option1"> <label class="form-check-label" for="rr5">代理人身分證明文件</label>
+      </div>
+      <div class="form-group mx-sm-2 mb-2">
+        <input class="form-check-input" type="checkbox" name="rr5" id="rr5" value="option1"> <label class="form-check-label" for="rr5">聲明書</label>
+      </div>
+    </div>
+
+    <fieldset class="px-3 pb-3">
+      <legend style="width: 150px;">代繳人資料</legend>
+      <div class="col-md-12 form-inline mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">姓名 : </label> 
+          <input type="text" class="form-control form-control-sm width100" value=""  placeholder="" >
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">國籍 : </label> 
+          <select class="form-control form-control-sm" id="exampleFormControlSelect1">
+            <option>使克魯星</option>
+            <option>地球人</option>
+            <option>中華民國</option>
+            <option>老外美</option>
+            <option>海王星</option>
+          </select>
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">身分證號 : </label> 
+          <input type="text" class="form-control form-control-sm width100" value="F128934568"  placeholder="" >
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">出生年月日 : </label> 
+          <input type="text" class="form-control form-control-sm width100" value="1983/06/17"  placeholder="" >
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">代理原因 : </label> 
+          <input type="text" class="form-control form-control-sm width100" value=""  placeholder="" >
+        </div>
+      </div>
+      
+      <div class="col-md-12 form-inline mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">與簽約名義人關係 : </label> 
+          <input type="text" class="form-control form-control-sm width100" value=""  placeholder="" >
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">通訊電話 : </label> 
+          <input type="text" class="form-control form-control-sm width100" value=""  placeholder="" >
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">比對結果 : </label> 
+          <input type="text" class="form-control form-control-sm width100" value=""  placeholder="" >
+        </div>
+      </div>
+      
+      <div class="col-md-12 form-inline mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">繳款額 : </label> 
+          <input type="text" class="form-control form-control-sm width100" value=""  placeholder="" >
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">退款額 : </label> 
+          <input type="text" class="form-control form-control-sm width100" value=""  placeholder="" >
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">合計 : </label> 
+          <input type="text" class="form-control form-control-sm width100" value=""  placeholder="" >
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="name1" class="mr-1">折讓額 : </label> 
+          <input type="text" class="form-control form-control-sm width100" value=""  placeholder="" >
+        </div>
+      </div>
+    </fieldset>
+
+  </div>
+
+  <br>
+</div>

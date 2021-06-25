@@ -1,0 +1,58 @@
+<!-- import layout檔案路徑 -->
+<html xmlns:th="http://www.thymeleaf.org" layout:decorator="layout/layout">
+
+<head>
+<script>
+	$(function() {
+		funcName = "列印發票(FE5P0826)";
+		updBread(funcName);
+	})
+</script>
+</head>
+
+<body>
+  <div layout:fragment="introSection">
+
+    <div class="row">
+      <div class="col-md-12 form-inline mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="code1" class="mr-1">工程代號 : </label> <select class="form-control form-control-sm" id="exampleFormControlSelect1">
+            <option>H101A</option>
+            <option>H101T</option>
+            <option>H102A</option>
+            <option>H93A</option>
+            <option>H95T</option>
+          </select>
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+          <input type="text" class="form-control form-control-sm width300" placeholder="" readonly>
+        </div>
+      </div>
+      <div class="col-md-12 form-inline mb-2">
+        <div class="form-group mx-sm-2 mb-2">
+          <label for="code1" class="mr-3">銀行 : </label> 
+          <input class="form-check-input" type="radio" name="rr1" id="rr1" value="option1">
+          <label class="form-check-label" for="rr1">房屋、土地</label>
+        </div>
+      </div>
+      
+    </div>
+    
+    <br>
+
+    <!-- 列印發票(FE5P0826) -->
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation"><a class="nav-link active" id="pills-1-tab" data-toggle="pill" href="#pills-1" role="tab" aria-controls="pills-1"
+        aria-selected="true">收據</a></li>
+      <li class="nav-item" role="presentation"><a class="nav-link " id="pills-2-tab" data-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-2"
+        aria-selected="false">發票</a></li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" th:include="page/pay/get/getInvoice/FE5P08261.html :: FE5P08261" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">loading......</div>
+      <div class="tab-pane fade " th:include="page/pay/get/getInvoice/FE5P08262.html :: FE5P08262" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">loading......</div>
+    </div>
+
+  </div>
+</body>
+
+</html>

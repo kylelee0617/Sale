@@ -1,0 +1,121 @@
+
+<!-- nav Bar -->
+<nav th:fragment="navBar" id="navBarMain" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	<link th:href="@{/css/bootstrap-4-navbar.css}" rel="stylesheet">
+	<script th:src="@{/js/bootstrap-4-navbar.js}"></script>
+
+	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		<ul class="navbar-nav full-width-div">
+			<!-- 第一層 -->
+			<li class="nav-item"><a class="nav-link" href="/page/home">首頁 <span class="sr-only">(current)</span></a></li>
+
+			<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+				aria-expanded="false">基本資料建立</a> <!-- 第二層 -->
+				<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<li><a class="dropdown-item dropdown-toggle" href="#">基本資料建立</a> <!-- 第三層 -->
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/page/basic/basic/basicCode">常用代號建立(FE5P0101)</a></li>
+							<li><a class="dropdown-item" href="/page/basic/basic/projectCode">工程代號建立(FE5P0301)</a></li>
+							<li><a class="dropdown-item" href="/page/basic/basic/custData">客戶資料建檔(FE5P0501)</a></li>
+						</ul></li>
+					<li><a class="dropdown-item dropdown-toggle" href="#">基本資料報表</a> <!-- 第三層 -->
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/page/basic/report/total">總表</a></li>
+							<li><a class="dropdown-item" href="/page/basic/report/custDetail">客戶資料清冊(FE5R0102)</a></li>
+							<li><a class="dropdown-item" href="/page/basic/report/carData">車位資料表(FE5R0501)</a></li>
+						</ul></li>
+					<li><a class="dropdown-item dropdown-toggle" href="#">名義人變更作業</a> <!-- 第三層 -->
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/page/basic/chgName/custPayList">客戶繳款明細查詢/列印(FE5R0505)</a></li>
+						</ul></li>
+				</ul></li>
+
+			<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+				aria-expanded="false">繳款作業</a> <!-- 第二層 -->
+				<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<li><a class="dropdown-item dropdown-toggle" href="#">繳款作業</a> <!-- 第三層 -->
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/page/pay/pay/payNotice">列印繳款通知單(FE5R0801)</a></li>
+						</ul></li>
+					<li><a class="dropdown-item dropdown-toggle" href="#">催繳作業</a> <!-- 第三層 -->
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/page/pay/call/callList">催繳明細表(FE5R0805)</a></li>
+							<li><a class="dropdown-item" href="/page/pay/call/callListPaper">列印催繳通知單(FE5R0901)</a></li>
+						</ul></li>
+					<li><a class="dropdown-item dropdown-toggle" href="#">收款作業</a> <!-- 第三層 -->
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/page/pay/get/getMoney">收款作業(FE5P0801)</a></li>
+							<li><a class="dropdown-item" href="/page/pay/get/getInvoice">產生發票(FE5R0826)</a></li>
+							<li><a class="dropdown-item" href="/page/pay/get/prtGetMoneyPaper">列印收款單(FE5R0803)</a></li>
+							<li><a class="dropdown-item" href="/page/pay/get/drptBankGetMoney">收款日報表(FE5R0804)</a></li>
+							<li><a class="dropdown-item" href="/page/pay/get/prtAuxPaper">副聯清單(FE5R0827)</a></li>
+						</ul></li>
+					<li><a class="dropdown-item dropdown-toggle" href="#">特殊作業</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/page/pay/special/special">訂金繳款資料轉入(FE5P0804 訂金明細)</a></li>
+						</ul></li>
+				</ul></li>
+
+			<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">統計報表</a> <!-- 第二層 -->
+				<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<li><a class="dropdown-item dropdown-toggle" href="#">各類報表</a> <!-- 第三層 -->
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/page/report/any/housePayTotal">房屋付款總表(FE5R0807)</a></li>
+							<li><a class="dropdown-item" href="/page/report/any/housePayDetail">房屋付款明細表(FE5R0806)</a></li>
+							<li><a class="dropdown-item" href="/page/report/any/transefer">轉檔報表(FE5R0837)</a></li>
+							<li><a class="dropdown-item" href="/page/report/any/transeferPayFirst">轉檔預收費用報表(向上合併)</a></li>
+						</ul></li>
+				</ul></li>
+
+			<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">其他作業</a> <!-- 第二層 -->
+				<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<li><a class="dropdown-item dropdown-toggle" href="#">對保作業</a> <!-- 第三層 -->
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/page/other/guarantee/guarantee">對保作業處理(各對象調整)(FE5P1401)</a></li>
+							<li><a class="dropdown-item" href="/page/other/guarantee/guaranteeOK">對保作業完成確認調整(FE5P1501)</a></li>
+							<li><a class="dropdown-item" href="/page/other/guarantee/prtGuarantee">列印對保通知單(預收費用明細表)(FE5R1402)</a></li>
+							<li><a class="dropdown-item" href="/page/other/guarantee/prtGuarantee">列印繳款通知單(代收款excel)(FE5R0833)</a></li>
+						</ul></li>
+					<li><a class="dropdown-item dropdown-toggle" href="#">銀貸交屋處理</a> <!-- 第三層 -->
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/page/other/loan/loanDetail">交屋狀況明細表(FE5R1504)</a></li>
+							<li><a class="dropdown-item" href="/page/other/loan/loanOK">交屋確認處理(FE5P1505)</a></li>
+							<li><a class="dropdown-item" href="/page/other/loan/loanUpdate">交屋明細表更新版(FE5R1508)</a></li>
+						</ul></li>
+					<li><a class="dropdown-item dropdown-toggle" href="#">解約處理</a> <!-- 第三層 -->
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/page/other/termination/termination">解約處理(FE5P1702)</a></li>
+						</ul></li>
+				</ul></li>
+
+			<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">基本資料</a> <!-- 第二層 -->
+				<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<li><a class="dropdown-item" href="/sale/basic/pricelist">價目表(Sale05M040)</a></li>
+					<li><a class="dropdown-item dropdown-toggle" href="#">基本資料2</a> <!-- 第三層 -->
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/page/other/guarantee/guarantee">基本資料2-1</a></li>
+							<li><a class="dropdown-item" href="/page/other/guarantee/guaranteeOK">基本資料2-2</a></li>
+							<li><a class="dropdown-item" href="/page/other/guarantee/prtGuarantee">基本資料2-3</a></li>
+							<li><a class="dropdown-item" href="/page/other/guarantee/prtGuarantee">基本資料2-4</a></li>
+						</ul></li>
+				</ul></li>
+
+			<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">購屋</a> <!-- 第二層 -->
+				<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<li><a class="dropdown-item" href="/page/other/guarantee/guarantee">購屋證明單(Sale05M090)</a></li>
+					<li><a class="dropdown-item dropdown-toggle" href="#">購屋2</a> <!-- 第三層 -->
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/page/other/guarantee/guarantee">購屋2-1</a></li>
+							<li><a class="dropdown-item" href="/page/other/guarantee/guaranteeOK">購屋2-2</a></li>
+							<li><a class="dropdown-item" href="/page/other/guarantee/prtGuarantee">購屋2-3</a></li>
+							<li><a class="dropdown-item" href="/page/other/guarantee/prtGuarantee">購屋2-4</a></li>
+						</ul></li>
+				</ul></li>
+
+		</ul>
+	</div>
+</nav>

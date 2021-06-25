@@ -1,0 +1,10 @@
+package com.fg.service.utils;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class BaseUtils {
+  
+  protected final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+}
