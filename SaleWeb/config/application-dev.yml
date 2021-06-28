@@ -1,0 +1,48 @@
+authTest: true
+server:
+  port: 8081
+spring:
+  application:
+    name: Sale
+  thymeleaf:
+    prefix: classpath:/templates/
+    cache: false
+    encoding: UTF-8
+    mode: HTML5
+    suffix: .html
+  resources: 
+    static-locations: classpath:/static/
+    cache: 
+      period: 0
+  jpa:
+    show-sql: true
+    generate-ddl: false
+    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+    properties: 
+      hibernate: 
+        enable_lazy_load_no_trans: true
+        ddl-auto: none
+  datasource:
+    primary: 
+      jdbcUrl: jdbc:sqlserver://172.22.14.6:1433;databaseName=FE5D;selectMethod=cursor
+      username: fed1
+      password: fed1fglife
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      hibernate-dialect: org.hibernate.dialect.SQLServer2012Dialect
+    secondary: 
+      jdbcUrl: jdbc:sqlserver://172.22.14.1:1433;databaseName=sale;selectMethod=cursor
+      username: sa
+      password: sapwdfglife
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      hibernate-dialect: org.hibernate.dialect.SQLServer2012Dialect
+    # 连接池的配置
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      auto-commit: true
+      minimum-idle: 10
+      idle-timeout: 60000
+      maximum-pool-size: 25
+      connection-test-query: SELECT 1
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      pool-name: DatebookHikariCP
