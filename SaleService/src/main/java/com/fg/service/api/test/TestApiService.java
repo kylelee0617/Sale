@@ -1,6 +1,7 @@
 package com.fg.service.api.test;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -10,8 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.fg.dao.entity.sale.Sale05m091Entity;
-import com.fg.dao.entity.sale.Sale05m091Entity2;
 import com.fg.dao.entity.sale.T91TestEntity;
+import com.fg.dao.repository.sale.Sale05M091NativeRepo;
 import com.fg.dao.repository.sale.Sale05M091Repository;
 import com.fg.dao.repository.sale.T91TestRepo;
 import com.fg.dao.utils.JPAUtil;
@@ -26,6 +27,9 @@ public class TestApiService extends BaseService {
 
   @Autowired
   private T91TestRepo sale091Nav;
+  
+  @Autowired
+  private Sale05M091NativeRepo sale091Nav2;
 
   // 91 JPA
   public Result getSale05m091Repo1(String orderNo) {
@@ -82,6 +86,14 @@ public class TestApiService extends BaseService {
     rs.setData(list);
     return rs;
   }
+  
+  // 91 JPA NAV POJO
+  public Result getSale05m091Repo171(String orderNo) {
+    Result rs = new Result();
+    List<Map<String, Object>> list = saleT091Repo.getListByOrderNo4(orderNo);
+    rs.setData(list);
+    return rs;
+  }
 
   // 91 JPA NAV POJO
   public Result getSale05m091Repo18(String orderNo) {
@@ -95,7 +107,14 @@ public class TestApiService extends BaseService {
     etx.commit();
     entityManager.close();        
 
-//    rs.setData(list);
+    return rs;
+  }
+  
+  // 91 JPA NAV POJO
+  public Result getSale05m091Repo19(String orderNo) {
+    Result rs = new Result();
+    List<Sale05m091Entity> list = sale091Nav2.getT91Test123(orderNo);
+    rs.setData(list);
     return rs;
   }
 

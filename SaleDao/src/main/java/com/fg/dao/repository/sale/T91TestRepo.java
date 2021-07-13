@@ -13,16 +13,13 @@ import com.fg.dao.entity.sale.T91TestEntity;
 @Repository
 @Transactional
 public class T91TestRepo {
-    @PersistenceContext
-    private EntityManager entityManager;
+  @PersistenceContext
+  private EntityManager entityManager;
 
-    public List<T91TestEntity> getByEntIdAndRoleIds(String orderNo) {
-        List<T91TestEntity> result = entityManager
-                .createNamedQuery("queryByEntIdAndRoleIdsT91test")
-                .setParameter("orderNo", orderNo)
-                .getResultList();
+  public List<T91TestEntity> getByEntIdAndRoleIds(String orderNo) {
+    List<T91TestEntity> result = entityManager.createNamedQuery("queryByEntIdAndRoleIdsT91test").setParameter("orderNo", orderNo).getResultList();
 
-        return result;
-    }
+    return result;
+  }
 
 }

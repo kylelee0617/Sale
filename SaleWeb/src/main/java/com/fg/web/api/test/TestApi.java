@@ -72,6 +72,13 @@ public class TestApi extends BaseController {
     return rsT091;
   }
   
+  @GetMapping(value = "/getRepo9171")
+  public Result getSale091Repo9171() {
+    String orderNo = "000331A110106001";
+    Result rsT091 = testServ.getSale05m091Repo171(orderNo);
+    return rsT091;
+  }
+  
   @GetMapping(value = "/getRepo918")
   public Result getSale091Repo918() {
     String orderNo = "000331A110106001";
@@ -79,7 +86,12 @@ public class TestApi extends BaseController {
     return rsT091;
   }
   
-  
+  @GetMapping(value = "/getRepo919")
+  public Result getSale091Repo919() {
+    String orderNo = "000331A110106001";
+    Result rsT091 = testServ.getSale05m091Repo19(orderNo);
+    return rsT091;
+  }
   
   
 }
