@@ -8,10 +8,10 @@ http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
     	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>com.fg.dao.entity.sale.Sale05m091Entity2</class>
         <properties>
-	        <property name="javax.connection.driver_class" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
-	        <property name="javax.connection.jdbc.url" value="${spring.datasource.secondary.jdbcUrl}" />
-	        <property name="javax.connection.username" value="${spring.datasource.secondary.username}" />
-	        <property name="javax.connection.password" value="${spring.datasource.secondary.password}" />
+	        <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+	        <property name="javax.persistence.jdbc.url" value="${spring.datasource.secondary.jdbcUrl}" />
+	        <property name="javax.persistence.jdbc.user" value="${spring.datasource.secondary.username}" />
+	        <property name="javax.persistence.jdbc.password" value="${spring.datasource.secondary.password}" />
 	        <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServer2012Dialect" />
 	        <property name="hibernate.show_sql" value="true" />
 	        <property name="hibernate.format_sql" value="true" />
